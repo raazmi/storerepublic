@@ -17,14 +17,36 @@ function Home(props){
                             </Col>
                         </Row>
                         <Row>
-                            <Col lg="4">
+                            <Col lg="4" className="mt-30">
                                 <div className="mi-service text-center">
                                     <div className="mi-service-icon">
                                         <ReactSVG src="/images/feathericons/code.svg"/>
                                     </div>
                                     <div className="mi-service-content">
                                         <h5>Web Design & Development</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quasi quo quas cum, ipsam minima excepturi natus.</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quasi quo quas cum.</p>
+                                    </div>
+                                </div>
+                            </Col>
+                            <Col lg="4" className="mt-30">
+                                <div className="mi-service text-center">
+                                    <div className="mi-service-icon">
+                                        <ReactSVG src="/images/feathericons/code.svg"/>
+                                    </div>
+                                    <div className="mi-service-content">
+                                        <h5>Web Hosting</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quasi quo quas cum.</p>
+                                    </div>
+                                </div>
+                            </Col>
+                            <Col lg="4" className="mt-30">
+                                <div className="mi-service text-center">
+                                    <div className="mi-service-icon">
+                                        <ReactSVG src="/images/feathericons/code.svg"/>
+                                    </div>
+                                    <div className="mi-service-content">
+                                        <h5>Digital Marketing</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quasi quo quas cum.</p>
                                     </div>
                                 </div>
                             </Col>

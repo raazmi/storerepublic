@@ -3,6 +3,28 @@
  */
 
 .mi-heroslider{
-    min-height: 60vh;
+    min-height: 100vh;
     background: $color-grey;
+    position: relative;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: $color-grey;
+        z-index: -1;
+        opacity: 0.55;
+    }
+
+    &-inner{
+        padding: 150px 0;
+    }
 }
