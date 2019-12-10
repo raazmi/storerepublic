@@ -1,0 +1,65 @@
+@mixin clearfix() {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+@mixin placeholder-color($placeholder-color) {
+    &::-webkit-input-placeholder {
+        color: $placeholder-color
+    }
+
+    &:-moz-placeholder {
+        color: $placeholder-color
+    }
+
+    &::-moz-placeholder {
+        color: $placeholder-color
+    }
+
+    &:-ms-input-placeholder {
+        color: $placeholder-color
+    }
+}
+
+
+
+// Gradient color
+@mixin gradient-color($value, $deg) {
+    @if $value==a {
+        background:linear-gradient($deg#{deg}, $color-theme 0%, rgba(0, 0, 0, 0.6) 36%, $color-secondary 100%);
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+
+    @else if $value==b {
+        background:linear-gradient($deg#{deg}, #000000 0%, transparent 100%);
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+
+    @else if $value==c {
+        background:linear-gradient($deg#{deg}, rgb(40, 172, 225) 12%, rgb(81, 204, 231) 50%, rgb(122, 235, 236) 91%);
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+}
+
+
+
+// Gradient Background
+@mixin gradient-bg($value, $deg) {
+    @if $value==a {
+        background:linear-gradient($deg#{deg}, $color-theme 0%, rgba(0, 0, 0, 0.6) 36%, $color-secondary 100%);
+    }
+
+    @else if $value==b {
+        background:linear-gradient($deg#{deg}, rgba(#000000, 0.4) 0%, transparent 90%);
+    }
+
+    @else if $value==c {
+        background:linear-gradient($deg#{deg}, rgb(40, 172, 225) 12%, rgb(81, 204, 231) 50%, rgb(122, 235, 236) 91%);
+    }
+}

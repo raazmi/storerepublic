@@ -1,0 +1,108 @@
+/**
+ * Footer
+ */
+
+.mi-footer {
+    background: $color-grey;
+
+    &-top {
+        background: $color-grey;
+    }
+
+    &-bottom{
+        background: darken($color-grey, 3);
+        padding: 15px 0;
+        padding-bottom: 0;
+    }
+
+    &-bottominner{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-payment{
+        span{
+            margin-right: 10px;
+            display: inline-block;
+        }
+    }
+
+    .single-widget {
+        .widget-title {
+            border-bottom: 1px solid $color-border;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 0;
+            margin-bottom: 0;
+
+            li {
+                list-style: none;
+                display: block;
+
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+
+                a {
+                    color: $color-body;
+                    display: block;
+                    transition: $transition;
+
+                    &:hover {
+                        color: $color-theme;
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .widget-info {
+        .widget-info-logo {
+            display: inline-block;
+            margin-bottom: 15px;
+            height: 60px;
+            img{
+                height: 100%;
+            }
+        }
+        p{
+            margin-bottom: 0;
+        }
+    }
+
+    .widget-contact {
+        &-inner {
+            address {
+                margin-bottom: 0;
+            }
+
+            .numbers {
+                position: relative;
+                padding-left: 30px;
+
+                span {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+
+                p {
+                    margin-bottom: 0;
+
+                    a {
+                        color: $color-body;
+                        transition: $transition;
+
+                        &:hover {
+                            color: $color-theme;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

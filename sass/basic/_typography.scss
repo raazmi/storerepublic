@@ -1,0 +1,209 @@
+/**
+ * Typography
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Public+Sans:300,400,400i,500,600,700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: $fz-body;
+    line-height: $lh-body;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $ff-body;
+    color: $color-body;
+    font-weight: 400;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $ff-heading;
+    color: $color-heading;
+}
+
+h1 {
+    font-size: 2.25rem;
+    line-height: 2.875rem;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2.625rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+    line-height: 2.375rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    line-height: 2.125rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+}
+
+h6 {
+    font-size: 1rem;
+    line-height: 1.625rem;
+}
+
+::-moz-selection {
+    background: $color-theme;
+    color: #ffffff;
+}
+
+::-ms-selection {
+    background: $color-theme;
+    color: #ffffff;
+}
+
+::-o-selection {
+    background: $color-theme;
+    color: #ffffff;
+}
+
+::selection {
+    background: $color-theme;
+    color: #ffffff;
+}
+
+@include placeholder-color($color-body);
+
+a,
+button {
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+input,
+select,
+textarea {
+
+    &:focus,
+    &:active {
+        outline: none;
+        border-color: $color-theme;
+    }
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    font-size: $fz-body;
+    vertical-align: middle;
+}
+
+input,
+select,
+button {
+    height: $field-height;
+    padding: 0 15px;
+
+    @media #{$layout-mobile-lg} {
+        height: 44px;
+    }
+}
+
+textarea {
+    padding: 10px 15px;
+}
+
+
+/* Checkbox & Radio Styles */
+input[type=checkbox],
+input[type=radio] {
+    visibility: hidden;
+    opacity: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    display: none;
+
+    &~label {
+        position: relative;
+        padding-left: 24px;
+        cursor: pointer;
+
+        &:before {
+            content: "";
+            font-family: 'Font Awesome 5 free';
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            border: 1px solid $color-border;
+            height: 15px;
+            width: 15px;
+            line-height: 1;
+            font-size: 13px;
+        }
+    }
+
+    &:checked {
+        &~label {
+            color: $color-theme;
+
+            &:before {
+                content: "\f00c";
+
+                color: $color-theme;
+                border-color: $color-theme;
+            }
+        }
+    }
+}
+
+input[type=radio] {
+    &~label {
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            border: 2px solid $color-border;
+            border-radius: 100px;
+            height: 15px;
+            width: 15px;
+            margin-top: -8px;
+            line-height: .5;
+            font-size: 28px
+        }
+    }
+
+    &:checked {
+        &~label {
+            &::before {
+                content: "";
+                color: $color-theme;
+                border-color: $color-theme
+            }
+        }
+    }
+}

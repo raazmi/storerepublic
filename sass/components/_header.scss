@@ -1,0 +1,100 @@
+/**
+ * Header Styles
+ */
+
+.mi-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 3px 3px rgba($color-border, 0.5);
+    padding: 10px 0;
+
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-logo {
+        display: inline-block;
+        height: 60px;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    &-buttons {
+        ul {
+            padding-left: 0;
+            margin-bottom: 0;
+            display: flex;
+
+            li {
+                list-style: none;
+                line-height: 1;
+                margin-left: 15px;
+            }
+        }
+
+        button,
+        a {
+            padding: 0;
+            height: auto;
+            background: transparent;
+            border: 0;
+            outline: 0;
+            display: inline-block;
+            height: 35px;
+            width: 35px;
+            text-align: center;
+            padding: 7px 0;
+            border-radius: 100px;
+            border: 1px solid $color-border;
+            transition: $transition;
+
+            div {
+                height: 100%;
+            }
+
+            svg {
+                height: 100%;
+                stroke: $color-heading;
+                transition: $transition;
+            }
+
+            &:hover {
+                border-color: $color-theme;
+
+                svg {
+                    stroke: $color-theme;
+                }
+            }
+        }
+    }
+}
+
+.mi-header-menu {
+    ul {
+        padding-left: 0;
+        margin-bottom: 0;
+
+        li {
+            list-style: none;
+            display: inline-block;
+
+            a {
+                display: inline-block;
+                padding: 5px 15px;
+                text-transform: uppercase;
+                color: $color-heading;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}

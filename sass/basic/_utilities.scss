@@ -1,0 +1,109 @@
+/**
+ * Utilities
+ */
+
+.mi-color-theme{
+    color: $color-theme;
+}
+
+.mi-color-secondary{
+    color: $color-secondary;
+}
+
+.mi-bg-grey{
+    background: $color-grey;
+}
+
+.mi-bg-white{
+    background: #ffffff;
+}
+
+.mi-padding {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.mi-padding-top {
+    padding-top: 150px;
+}
+
+.mi-padding-bottom {
+    padding-bottom: 150px;
+}
+
+/* Slick Reset */
+.slick-slide {
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    &.slick-current,
+    &.slick-active {
+
+        &:active,
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+/* Slick Dots Styles */
+.slick-slider {
+    &.slick-dotted {
+        margin-bottom: 50px;
+
+        .slick-dots {
+            bottom: -50px;
+            line-height: 1;
+
+            li {
+                display: inline-block;
+                height: 14px;
+                width: 14px;
+                background: $color-secondary;
+                border-radius: 100px;
+                vertical-align: middle;
+                transition: $transition;
+                margin: 0 7px;
+
+                button {
+                    display: none;
+                }
+
+                &.slick-active {
+                    background: $color-theme;
+                }
+            }
+        }
+    }
+}
+
+/* Slick Slider Arrow */
+.slick-slider {
+
+    .slick-prev,
+    .slick-next {
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        border-radius: 100px;
+        border: 2px solid $color-theme;
+        color: $color-theme;
+        background: rgba($color-theme, 0.2);
+        font-size: 2rem;
+        line-height: 52px;
+        transition: $transition;
+
+        &::before {
+            display: none;
+        }
+
+        &:hover {
+            background: rgba($color-secondary, 0.2);
+            color: $color-secondary;
+            border-color: $color-secondary;
+        }
+    }
+}
