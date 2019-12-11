@@ -106,38 +106,52 @@ button {
     }
 }
 
-input,
-select,
-textarea {
+input{
+    
 
-    &:focus,
-    &:active {
+    &:focus{
         outline: none;
-        border-color: $color-theme;
+        border: 1px solid $color-theme;
     }
+}
+
+label {
+    color: $color-heading;
 }
 
 input,
 select,
 textarea {
     width: 100%;
-    font-size: $fz-body;
-    vertical-align: middle;
-}
-
-input,
-select,
-button {
     height: $field-height;
+    line-height: $field-height;
+    border: 1px solid $color-border;
+    border-radius: 4px;
+    vertical-align: middle;
+    transition: $transition;
     padding: 0 15px;
 
-    @media #{$layout-mobile-lg} {
-        height: 44px;
+    &:focus,
+    &:active,
+    &:not(:placeholder-shown) {
+        border-color: $color-border;
+        background: rgba($color-secondary, 0.1);
     }
 }
 
-textarea {
+textarea{
+    height: auto;
     padding: 10px 15px;
+}
+
+button{
+    height: $field-height;
+    padding: 0 15px;
+    outline: none;
+    border: 1px solid $color-border;
+    background: $color-grey;
+    color: $color-heading;
+    border-radius: 4px;
 }
 
 
@@ -156,10 +170,11 @@ input[type=radio] {
         position: relative;
         padding-left: 24px;
         cursor: pointer;
+        user-select: none;
 
         &:before {
             content: "";
-            font-family: 'Font Awesome 5 free';
+            font-family: 'FontAwesome';
             font-weight: 700;
             position: absolute;
             left: 0;
@@ -167,8 +182,10 @@ input[type=radio] {
             border: 1px solid $color-border;
             height: 15px;
             width: 15px;
-            line-height: 1;
-            font-size: 13px;
+            font-size: 10px;
+            border-radius: 4px;
+            text-align: center;
+            line-height: 1.2;
         }
     }
 
@@ -178,9 +195,9 @@ input[type=radio] {
 
             &:before {
                 content: "\f00c";
-
-                color: $color-theme;
+                color: #ffffff;
                 border-color: $color-theme;
+                background: $color-theme;
             }
         }
     }

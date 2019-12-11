@@ -9,4 +9,34 @@
     p{
         margin-bottom: 0;
     }
+
+    &-icon{
+        position: relative;
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &-iconbg{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+
+        svg{
+            fill: rgba($color-theme, 0.1);
+        }
+    }
+
+    &-iconwrapper{
+        svg{
+            height: 50px;
+            width: auto;
+        }
+    }
 }

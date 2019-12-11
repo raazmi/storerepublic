@@ -1,0 +1,19 @@
+/**
+ * Button
+ */
+
+.mi-button,
+a.mi-button,
+button.mi-button{
+    height: $field-height;
+    border: 1px solid $color-theme;
+    background: $color-theme;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    padding: 0 25px;
+    transition: $transition;
+
+    &:hover{
+        box-shadow: 0 2px 15px 0 rgba($color-theme, 0.4);
+    }
+}
